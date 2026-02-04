@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 2,
+  "mediaType": "application/vnd.oci.image.manifest.v1+json",
+  "config": {
+    "mediaType": "application/vnd.buildkit.historyrecord.v0",
+    "digest": "sha256:5b903b3f120da00efd25abcb55e718d29c45827a49094dbd0398ca6a94ca0553",
+    "size": 27819
+  },
+  "layers": [
+    {
+      "mediaType": "application/vnd.buildkit.otlp.json.v0",
+      "digest": "sha256:5bfa63a00e2ca8af32cbbbb8dd0fa1058f2902305c13dda2653f55091dfb85a0",
+      "size": 1013898
+    },
+    {
+      "mediaType": "application/vnd.buildkit.status.v0",
+      "digest": "sha256:a99b9c2b653672eb9350ab59ac32a07556a0e2888b6fa6c5752580a590af8679",
+      "size": 53027
+    },
+    {
+      "mediaType": "application/vnd.in-toto+json",
+      "digest": "sha256:280e3604d655bf97d8a44360f56ed005f59240a82d7c31fb4c07436e7ff3777d",
+      "size": 106415,
+      "annotations": {
+        "in-toto.io/predicate-type": "https://slsa.dev/provenance/v0.2"
+      }
+    },
+    {
+      "mediaType": "application/json",
+      "digest": "sha256:c005848b9b2a230507892f3220bd0064016d47cb309137162d291cf607eb6232",
+      "size": 856,
+      "annotations": {
+        "vnd.export-build.descriptor.mediatype": "application/vnd.oci.image.index.v1+json"
+      }
+    }
+  ]
+}

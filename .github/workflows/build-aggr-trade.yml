@@ -34,8 +34,8 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          context: ./anthonybauld-aggr-trade
-          file: ./anthonybauld-aggr-trade/Dockerfile
+          context: ./aggr
+          file: ./aggr/docker/Dockerfile
           push: true
           tags: |
             ghcr.io/anthonybauld/anthonybauld-aggr-trade:3.8.3
