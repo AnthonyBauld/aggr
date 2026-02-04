@@ -1,10 +1,9 @@
 services:
   app_proxy:
     environment:
-      APP_HOST: anthonybauld-aggr-trade_web_1
+      APP_HOST: anthonybauld-aggr-trade_app_1
       APP_PORT: 80
 
-  web:
-    image: ghcr.io/anthonybauld/anthonybauld-aggr-trade:3.8.3
-    restart: on-failure
-    stop_grace_period: 1m
+  app:
+    image: ghcr.io/anthonybauld/anthonybauld-aggr-trade@sha256:6f15de3cd2b5dc026551c34841fa297e9e05dc652c262f3262a1dc859ded513a
+    restart: unless-stopped
