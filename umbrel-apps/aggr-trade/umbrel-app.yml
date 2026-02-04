@@ -1,0 +1,21 @@
+manifestVersion: 1
+id: aggr-trade
+category: finance
+name: Aggr Trade
+version: "3.8.3"
+tagline: Live crypto trades aggregator
+description: >-
+  Aggr Trade is a live cryptocurrency trades aggregator that streams market
+  orders from major exchanges in real time, groups trades by time/side, and
+  visualizes rolling volume and activity.
+developer: Tucsky
+website: https://aggr.trade
+dependencies: []
+repo: https://github.com/Tucsky/aggr
+support: https://discord.com/invite/MYMUEgMABs
+port: 80
+gallery: []
+releaseNotes: ""
+path: ""
+defaultUsername: ""
+defaultPassword: ""
