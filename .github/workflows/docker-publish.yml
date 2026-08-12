@@ -16,6 +16,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Find Dockerfile Path
+        id: find-dockerfile
+        run: |
+          DOCKERFILE_PATH=$(find . -maxdepth 3 -name "Dockerfile" | head -n 1)
+          echo "Found Dockerfile at: $DOCKERFILE_PATH"
+          echo "file_path=$DOCKERFILE_PATH" >> $GITHUB_OUTPUT
+
       - name: Set up QEMU for multi-arch builds
         uses: docker/setup-qemu-action@v3
 
@@ -32,8 +39,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./server
-          file: ./server/Dockerfile
+          context: .
+          file: ${{ steps.find-dockerfile.outputs.file_path }}
           platforms: linux/amd64,linux/arm64
           push: true
           tags: ghcr.io/anthonybauld/aggr:latest
